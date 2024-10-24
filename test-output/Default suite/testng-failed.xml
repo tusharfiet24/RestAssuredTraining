@@ -5,6 +5,9 @@
     <classes>
       <class name="day7.Authentications">
         <methods>
+          <include name="testOAuth2Authentication"/>
+          <include name="testOAuth1Authentication"/>
+          <include name="testBearerTokenAuthentication"/>
           <include name="testAPIKeyAuthentication"/>
         </methods>
       </class> <!-- day7.Authentications -->

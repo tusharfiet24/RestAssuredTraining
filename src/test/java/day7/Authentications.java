@@ -47,10 +47,10 @@ public class Authentications {
 	
 	@Test(priority = 4)
 	void testBearerTokenAuthentication() {
-		String bearerToken = "apitoken";
+//		String bearerToken = "apitoken";
 		
 		given()
-			.header("Authorization","Bearer "+bearerToken)
+//			.header("Authorization","Bearer "+bearerToken)
 		.when()
 			.get("https://api.github.com/user/repos")
 		.then()
@@ -71,9 +71,9 @@ public class Authentications {
 	
 	@Test(priority = 6)
 	void testOAuth2Authentication() {
-		given()
-			.auth().oauth2("apitoken")
-		.when()
+//		given()
+//			.auth().oauth2("apitoken").
+		when()
 			.get("https://api.github.com/user/repos")
 		.then()
 			.statusCode(200)
