@@ -47,7 +47,7 @@ public class Authentications {
 	
 	@Test(priority = 4)
 	void testBearerTokenAuthentication() {
-		String bearerToken = "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";
+		String bearerToken = "apitoken";
 		
 		given()
 			.header("Authorization","Bearer "+bearerToken)
@@ -72,7 +72,7 @@ public class Authentications {
 	@Test(priority = 6)
 	void testOAuth2Authentication() {
 		given()
-			.auth().oauth2("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")
+			.auth().oauth2("apitoken")
 		.when()
 			.get("https://api.github.com/user/repos")
 		.then()
@@ -84,7 +84,7 @@ public class Authentications {
 	void testAPIKeyAuthentication() {
 		
 		given()
-			.queryParam("Default", "4f4103574799c91dd0e592b9a0bdc426")
+			.queryParam("Default", "apitooken")
 		.when()
 			.get("api.openweathermap.org/data/2.5/forecast/daily?q=Delhi&units=metric&cnt=7")
 		.then()
